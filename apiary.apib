@@ -1,0 +1,51 @@
+FORMAT: 1A
+
+# Agenda
+Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+
+# Group Login
+allow the teacher to login **Agenda API**
+
+## login Collection [/notes]
+### List all Notes [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park"
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office"
+        }]
+
+## login [/login]
+### Login [POST]
++ Request (application/json)
+
+        { "username": "jad", "password": "4234" }
+
++ Response 200 (application/json)
+
+        {
+        "message":"hello world",
+        "error":32,
+        "success":true 
+        }
+
+## Note [/notes/{id}]
+A single Note object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+
+### Retrieve a Note [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
+
+### Remove a Note [DELETE]
++ Response 204

@@ -20,33 +20,38 @@ allow the teacher to login **Agenda API**
 ### Login [POST]
 + Request (application/json)
 
-        { "username": "jad", "password": "4234" }
+        { "username": "jad", "password": "4234" ,"type": "teacher" }
 
 + Response 200 (application/json)
 
         {
-        "message":"",
-        "code":0,
-        "success":true 
-        "data": {
-                id: 1023,
-                name: "jad",
-                class: [{
-                    "id": 1,
-                    "name": "الاول",
-                    section: [{
-                        "id": 2,
-                        "name": "sho3be alef",
-                        "lang":"Eng",
-                        "langId": 2
-                    }],
-                    course: [{
-                        "id": 2,
-                        "name": "mathematique",
-                        "langId": 1
-                    }]
-                }]
-            }
+          "message": "",
+          "code": 0,
+          "success": true,
+          "data": {
+            "id": 1023,
+            "name": "jad",
+            "class": [
+              {
+                "id": 1,
+                "name": "الاول",
+                "section": [
+                  {
+                    "id": 2,
+                    "name": "sho3be alef",
+                    "lang": "Eng",
+                    "langId": 2
+                  }
+                ],
+                "course": [
+                  {
+                    "id": 2,
+                    "name": "mathematique"
+                  }
+                ]
+              }
+            ]
+          }
         }
 
 ## Note [/notes/{id}]

@@ -6,16 +6,6 @@ Agenda API is a *short texts saving* service similar to its physical paper prese
 # Group Login
 allow the teacher to login **Agenda API**
 
-## login Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
-
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
-
 ## login [/login]
 ### Login [POST]
 + Request (application/json)
@@ -54,7 +44,33 @@ allow the teacher to login **Agenda API**
           }
         }
 
-## Note [/notes/{id}]
+# Group Homeworks
+manage the homeworks in **Agenda API**
+## homeworks Collection [/homeworks/{id}/{type}/{date}]
+### List all homeworks [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "homework": "Jogging in park",
+          "teacher": "Jhon amigo",
+          "course": "Maths",
+          "date": "2015-12-04"
+        }, {
+          "id": 1,
+          "homework": "Do not do your homework",
+          "teacher": "Jhon amigo",
+          "course": "Physics",
+          "date": "2015-12-04"
+        }, {
+          "id": 1,
+          "homework": "You love the man ;)",
+          "teacher": "Jhone the ripper :P",
+          "course": "Chemistry",
+          "date": "2015-12-04"
+        }]
+        
+## homework [/homeworks/{id}]
 A single Note object with all its details
 
 + Parameters

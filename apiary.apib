@@ -70,6 +70,40 @@ manage the homeworks in **Agenda API**
           "date": "2015-12-04"
         }]
         
+## search homeworks [/homeworks/search]
+### List homeworks by options [POST]
++ Request (application/json)
+
+        {
+          "courseId": 2,
+          "classId": 1,
+          "id": 1023,
+          "sectionId": 2,
+          "date": "2015-03-15"
+        }
+        
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "homework": "Jogging in park",
+          "teacher": "Jhon amigo",
+          "course": "Maths",
+          "date": "2015-12-04"
+        }, {
+          "id": 2,
+          "homework": "Do not do your homework",
+          "teacher": "Jhon amigo",
+          "course": "Physics",
+          "date": "2015-12-04"
+        }, {
+          "id": 3,
+          "homework": "You love the man ;)",
+          "teacher": "Jhone the ripper :P",
+          "course": "Chemistry",
+          "date": "2015-12-04"
+        }]
+        
 ##  Add Homework [/homework/add]
 ### Create a Homework [POST]
 add homework 

@@ -10,38 +10,46 @@ allow the teacher to login **Agenda API**
 ### Login [POST]
 + Request (application/json)
 
-        { "username": "jad", "password": "4234" ,"type": "teacher" }
+        { "username": "jad", "password": "4234" ,"type": "parent" }
 
 + Response 200 (application/json)
 
         {
-          "message": "",
-          "code": 0,
           "success": true,
-          "data": {
-            "id": 1023,
-            "name": "jad",
-            "classes": [
-              {
-                "id": 1,
-                "name": "الاول",
-                "sections": [
-                  {
-                    "id": 2,
-                    "name": "sho3be alef",
-                    "lang": "Eng",
-                    "langId": 2
-                  }
-                ],
-                "courses": [
-                  {
-                    "id": 2,
-                    "name": "mathematique"
-                  }
-                ]
-              }
-            ]
-          }
+          "error": 0,
+          "message": "",
+          "data": [
+            {
+              "id": 5,
+              "name": "مهند",
+              "classId": 5,
+              "className": "الثّاني ابتدائي",
+              "sectionId": 9,
+              "sectionName": "ب",
+              "languageId": 1,
+              "languageName": "English"
+            },
+            {
+              "id": 9,
+              "name": "زينب",
+              "classId": 5,
+              "className": "الثّاني ابتدائي",
+              "sectionId": 8,
+              "sectionName": "أ",
+              "languageId": 1,
+              "languageName": "English"
+            },
+            {
+              "id": 19,
+              "name": "محمد",
+              "classId": 5,
+              "className": "الثّاني ابتدائي",
+              "sectionId": 8,
+              "sectionName": "أ",
+              "languageId": 1,
+              "languageName": "English"
+            }
+          ]
         }
 
 # Group Homeworks
